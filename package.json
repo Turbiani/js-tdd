@@ -1,0 +1,25 @@
+{
+  "name": "js-tdd",
+  "version": "1.0.0",
+  "description": "Biblioteca utilizada nos estudos do curso JS com TDD na prática do Willian Justen. https://willianjusten.teachable.com/p/js-com-tdd-na-pratica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Turbiani/js-tdd.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library",
+    "development"
+  ],
+  "author": "Leonardo Turbiani Cunha <leo.turbiani@gmail.com> (http://who.leozera.com.br/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Turbiani/js-tdd/issues"
+  },
+  "homepage": "https://github.com/Turbiani/js-tdd#readme"
+}
