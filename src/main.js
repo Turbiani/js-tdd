@@ -1,3 +1,3 @@
-const a = "oi";
+const a = 'oi';
 
 console.log(a);
