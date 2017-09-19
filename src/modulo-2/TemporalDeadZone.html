@@ -1,0 +1,23 @@
+<script>
+(function IIFE () {
+  'use strict';
+
+  console.log(version); // undefined
+  console.log(letVersion);
+  // Uncaught ReferenceError: letVersion is not defined
+  console.log(VERSION);
+  // Uncaught ReferenceError: VERSION is not defined
+
+  var version = 'es6';
+  let letVersion = 'ES6';
+  const VERSION = 'ES6';
+})();
+
+/*
+Com variáveis declaradas com var, não importa em qual momento da função ela está sendo declarada, o javascript fará a declaração dela como undefined no ínicio da função.
+
+Com let, ele faz o hoisting para o início do bloco, porém não permite você acessar a variável até a sua declaração, mesmo sem atribuição alguma, por exemplo:
+
+E com const, funciona da mesma forma que o let.
+ */
+</script>

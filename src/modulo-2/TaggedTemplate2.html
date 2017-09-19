@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>04 - Tagged Template Literal - 2</title>
+</head>
+
+<style>
+  .green {
+    color: green;
+    font-size: 25px;
+  }
+</style>
+<body>
+</body>
+
+<script>
+
+  'use strict';
+
+  const moment = new Date();
+
+  let name = 'Jonas';
+
+  function tag (strings, ...values) {
+    console.log(strings[0]);
+    console.log(strings[1]);
+    console.log(strings[2]);
+
+    console.log(values[0]);
+    console.log(values[1]);
+
+    return `Whatever ${values[0]}!`;
+  }
+
+  console.log(tag`Hello, my name is ${name} and I'm ${moment} years old`);
+
+</script>
+</html>
