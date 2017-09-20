@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>01 - Destructuring Objects</title>
+</head>
+<body>
+</body>
+
+<script>
+  var data = {
+    name: 'Willian',
+    surname: 'Justen',
+    age: 25,
+    blog: 'https://willianjusten.com.br',
+    social: {
+      twitter: '@Willian_Justen',
+      facebook: '/willianjusten'
+    }
+  };
+
+  // const name = data.name;
+  // const surname = data.surname;
+  // const twitter = data.social.twitter;
+  // console.log(name);
+  // console.log(surname);
+  // console.log(twitter);
+  //
+
+  const { name, surname } = data;
+  console.log(name);
+  console.log(surname);
+
+  const { facebook, twitter } = data.social;
+
+  console.log(facebook);
+  console.log(twitter);
+
+
+  const { facebook: fb } = data.social;
+
+  console.log(fb);
+
+  const { city = 'Dublin' } = data;
+  console.log(city);
+
+  //AGORA EM ARRAYS
+  const arr = ['Willian', 'Justen', 26, 'Dublin'];
+  const [ name, surname, age, city ] = arr;
+
+  console.log(name);
+  console.log(surname);
+  console.log(age);
+  console.log(city);
+
+  //SWAP VARIABLES
+  let a = 42;
+  let b = 21;
+
+  console.log("a: ", a);
+  console.log("b: ", b);
+
+  [a, b] = [b, a];
+
+  console.log("a: ", a);
+  console.log("b: ", b);
+
+</script>
+</html>
