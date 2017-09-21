@@ -10,7 +10,9 @@
   let foo = Symbol('name');
   let bar = Symbol('name');
 
-  console.log(foo == bar);
+  console.log(foo);
+
+  console.log(foo === bar);
   //Dá false, pois symbol é imutável, e apesar de terem valores iguais, o identificador deles é diferente
 
   let obj = {

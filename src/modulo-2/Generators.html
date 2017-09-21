@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>01 - Generators Intro</title>
+</head>
+<body>
+</body>
+
+<script>
+  function* genNames() {
+    console.log('Chamando primeiro nome!');
+    yield 'Willian';
+
+    console.log('Chamando segundo nome!');
+    yield 'Jonas';
+
+    console.log('Chamando terceiro nome!');
+    yield 'Gabriel';
+  }
+
+  const names = genNames();
+
+  console.log(names.next());
+  console.log(names.next());
+  console.log(names.next());
+
+  //O que ocorre é que consigo iterar nos métodos de genNames, chamando de pouco a pouco
+  //Loco né ? nunca tinha visto isso, meu amigo Bruno Agutoli disse que viu em Python ;)
+
+</script>
+</html>
