@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>01 - Revisão Herança Prototipal ES5</title>
+</head>
+<body>
+</body>
+
+<script>
+
+  // class
+  function Animal(kind, sound) {
+    // constructor
+    this.kind = kind;
+    this.sound = sound;
+  }
+
+  // method
+  Animal.prototype.hello = function() {
+    console.log(`${this.sound} I'm a ${this.kind}!`);
+  }
+
+  const dog = new Animal('dog', 'auau');
+  const cat = new Animal('cat', 'meow');
+
+  //Ao acessar o prototype de Animal, eu adicionei um comportamento a todo mundo dessa classe
+  //No caso agora tanto cat quando dog possuem o método hello
+</script>
+</html>

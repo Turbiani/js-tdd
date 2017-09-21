@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>03 - Promises Múltiplas</title>
+</head>
+<body>
+</body>
+
+<script>
+  const currency = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve({ currency: 'euro', value: 3.50 });
+    }, 5000);
+  });
+
+  const countries = new Promise((resolve, reject) => {
+    resolve(['Ireland', 'England', 'Scotland']);
+  });
+
+  //---AQUI AGUARDA TODAS AS PROMISES RETORNAREM
+  // Promise
+  //     .all([currency, countries])
+  //     .then(responses => {
+  //         console.log(responses);
+  //     })
+
+
+  //---AQUI CAI NO THEN ASSIM QUE ALGUMA RETORNAR
+  Promise
+    .race([currency, countries])
+    .then(responses => {
+      console.log(responses);
+    })
+
+</script>
+</html>
