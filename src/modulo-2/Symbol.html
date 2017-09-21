@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>01 - Symbols Intro</title>
+</head>
+<body>
+</body>
+
+<script>
+  let foo = Symbol('name');
+  let bar = Symbol('name');
+
+  console.log(foo == bar);
+  //Dá false, pois symbol é imutável, e apesar de terem valores iguais, o identificador deles é diferente
+
+  let obj = {
+    [Symbol('name')]: 'Willian',
+    [Symbol('age')]: 26,
+    city: 'Dublin'
+  };
+
+  //console.log(obj) exibe apenas city. Pois symbol fica oculto, abaixo iremos mostrar como pegar os atributos symbol do obj
+
+  const symbols = Object.getOwnPropertySymbols(obj);
+
+  const data = symbols.map(sym => obj[sym]);
+
+  console.log(data);
+
+</script>
+</html>

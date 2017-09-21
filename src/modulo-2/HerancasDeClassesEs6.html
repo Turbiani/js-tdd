@@ -20,6 +20,7 @@
 
   class Dog extends Animal {
     constructor(name, sound) {
+      //Preciso alimentar o construtor do Pai (Quebra um pouco do SOLID mas beleza)
       super(name);
       this.sound = sound;
     }
@@ -31,5 +32,8 @@
 
   const elephant = new Animal('Dumbo');
   const dog = new Dog('Jake', 'auau');
+
+  //Ao chamar dog.hello acessamos o método da classe Pai Animal
+  //Mas elephant não consegue acessar bark =)
 </script>
 </html>
