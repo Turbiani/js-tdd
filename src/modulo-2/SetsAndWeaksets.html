@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sets and Weaksets</title>
+</head>
+<body>
+</body>
+
+<script>
+  //Mesma pegada do Set do Java
+
+  let mySet = new Set(['willian', 'jonas', 'godoy']);
+
+  mySet.add('marcio');
+  mySet.add('marcio');
+  mySet.add('marcio');
+  mySet.add('willian');
+
+  mySet.delete('willian');
+
+  console.log(mySet.has('willian'));
+  console.log(mySet.has('marcio'));
+
+  console.log(mySet[1]);
+
+  let it = mySet.values();
+
+  console.log(it.next());
+
+  for (name of it) {
+    console.log(name);
+  }
+
+
+  //WeakSet - Similar ao Set, porém não é iterable e não aceita tipos primitivos
+  let obj1 = {
+    name: 'Willian',
+    age: 26
+  };
+
+  let obj2 = {
+    name: 'Jonas',
+    age: 22
+  };
+
+  let ws = new WeakSet([obj1, obj2]);
+</script>
+</html>

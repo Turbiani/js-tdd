@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maps And WeakMaps</title>
+</head>
+<body>
+</body>
+
+<script>
+  let m = new Map();
+
+  m.set('Willian', 26);
+  m.set('Jonas', 22);
+  m.set('Godoy', 30);
+
+  let it = m.values();
+
+  console.log(it.next());
+
+  for (name of it) {
+    console.log(name);
+  }
+
+  //WeakMap assim como WeakSet, só aceita objetos
+  let obj1 = {
+    name: 'Willian',
+    age: 26
+  };
+
+  let obj2 = {
+    name: 'Jonas',
+    age: 22
+  };
+
+  let wm = new WeakMap();
+
+  wm.set(obj1, 'Info do Willian');
+  wm.set(obj2, 'Info do Jonas');
+
+  //Assim como o WeakSet, o WeakMap é fraco. Como assim ? Se deletarmos um objeto do escopo, e este estiver dentro de wm
+  //Ele também sumirá de wm. Veja o exemplo abaixo
+
+  console.log(wm);
+  //WeakMap {{…} => "Info do Willian", {…} => "Info do Jonas"}
+
+  //Agora irei matar obj1 do escopo
+  obj1 = null;
+
+  //Agora nosso weakmap tem apenas Info do Jonas
+  //WeakMap {{…} => "Info do Jonas"}
+
+</script>
+</html>
