@@ -1,0 +1,35 @@
+{
+  "name": "trabalhando-com-tdd",
+  "version": "1.0.0",
+  "description": "Diretório com os códigos aprendidos no módulo \"Unindo conceitos na prática\" do curso https://willianjusten.teachable.com/courses/103968/",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
+    "lint": "./node_modules/.bin/eslint src/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Turbiani/js-tdd.git"
+  },
+  "keywords": [
+    "js",
+    "TDD",
+    "javascript",
+    "curso",
+    "es6"
+  ],
+  "author": "Leonardo Turbiani <turbiani@cotabox.com.br> (http://who.leozera.com.br/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Turbiani/js-tdd/issues"
+  },
+  "homepage": "https://github.com/Turbiani/js-tdd#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "mocha": "^5.0.0"
+  }
+}
