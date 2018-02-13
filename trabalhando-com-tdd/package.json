@@ -4,7 +4,7 @@
   "description": "Diretório com os códigos aprendidos no módulo \"Unindo conceitos na prática\" do curso https://willianjusten.teachable.com/courses/103968/",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --bail --reporter=spec",
     "lint": "./node_modules/.bin/eslint src/*.js"
   },
   "repository": {
