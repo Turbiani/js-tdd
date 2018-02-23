@@ -8,7 +8,8 @@
     "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --bail --reporter=spec --watch --require babel-register",
     "test:coverage": "nyc npm test",
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "prepush": "nom run lint && npm run test:coverage"
+    "prepush": "npm run lint && npm run test:coverage",
+    "precommit": "npm run lint"
   },
   "nyc": {
     "functions": 80,
