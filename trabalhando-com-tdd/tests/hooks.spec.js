@@ -1,4 +1,5 @@
-/* global it describe before beforeEach after afterEach context */
+/*
+/!* global it describe before beforeEach after afterEach context *!/
 describe('Main', () => {
   // roda antes do bloco
   before(() => {
@@ -43,3 +44,4 @@ describe('Main', () => {
 // test 2
 // afterEach
 // after
+*/
